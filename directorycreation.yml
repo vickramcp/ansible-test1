@@ -7,4 +7,4 @@
     gather_facts: False
     tasks:
     - name: Create directory
-      file: path=/home/ec2-user/nira state=directory mode=775 owner=ansible group=ansible
+      file: path=/home/ec2-user/nira state=directory mode=775 owner=root
