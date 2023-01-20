@@ -1,0 +1,8 @@
+---
+  - name: "Playing with Ansible."
+# Ansible Playbook will run on the Localhost where AWX is installed
+    hosts: localhost
+    connection: local
+    tasks:
+    - name: Create directory
+      file: path=/home/ec2-user/nira state=directory mode=775 owner=ansible group=ansible
