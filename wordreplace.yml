@@ -1,0 +1,13 @@
+---
+- name: Ansible Test Playbook
+  gather_facts: false
+  hosts: localhost
+  connection: local
+  # hosts is used to define on which server we need to run our scripts. as of now we are separating the files with the tag names. 
+  # SO we need to give the tag name specified for the ec2 instance we added while creating the machine.
+  tasks:
+    - name: Replace example
+      replace:
+        path: /home/ec2-user/samplefile.txt
+        regexp: 'Hello'
+        replace: "KILLER"
