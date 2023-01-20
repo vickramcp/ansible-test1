@@ -1,0 +1,8 @@
+---
+  - name: "Playing with Ansible."
+# Ansible Playbook will run on the Localhost where AWX is installed
+    hosts: localhost
+    connection: local
+    tasks:
+    - name: Create a file
+      file: path=/home/ansible/niranjan.txt state=touch
